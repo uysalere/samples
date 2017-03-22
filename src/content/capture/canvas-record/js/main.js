@@ -39,11 +39,11 @@ main();
 // window.isSecureContext could be used for Chrome
 var isSecureOrigin = location.protocol === 'https:' ||
 location.hostname === 'localhost';
-if (!isSecureOrigin) {
-  alert('getUserMedia() must be run from a secure origin: HTTPS or localhost.' +
-    '\n\nChanging protocol to HTTPS');
-  location.protocol = 'HTTPS';
-}
+// if (!isSecureOrigin) {
+//   alert('getUserMedia() must be run from a secure origin: HTTPS or localhost.' +
+//     '\n\nChanging protocol to HTTPS');
+//   location.protocol = 'HTTPS';
+// }
 
 var stream = canvas.captureStream(); // frames per second
 console.log('Started stream capture from canvas element: ', stream);
@@ -84,7 +84,7 @@ function startRecording() {
   } catch (e0) {
     console.log('Unable to create MediaRecorder with options Object: ', e0);
     try {
-      options = {mimeType: 'video/webm,codecs=vp9'};
+      options = {mimeType: 'video/webm,codecs=vp8'};
       mediaRecorder = new MediaRecorder(stream, options);
     } catch (e1) {
       console.log('Unable to create MediaRecorder with options Object: ', e1);

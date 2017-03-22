@@ -16,6 +16,10 @@ button:last-of-type {
   margin: 0;
 }
 
+div {
+  background-color: #ccc;
+}
+
 canvas {
   background-color: #ccc;
   height: 231px;
