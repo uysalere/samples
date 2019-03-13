@@ -74,7 +74,7 @@ function main() {
     // original is 480 x 270
 	c.width = 240 * ratio;
 	c.height = 180 * ratio;
-    gl = WebGLUtils.setupWebGL(c);
+    gl = WebGLUtils.setupWebGL(c, {preserveDrawingBuffer: false});
     if (!gl)
         return;
     g_width = c.width;
